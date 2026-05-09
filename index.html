@@ -7,65 +7,100 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* Apple-like typography and smooth scrolling */
+        :root {
+            --apple-blue: #0071e3;
+        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f5f5f7; /* Apple's classic light gray background */
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #eef2f8;
+            background-image:
+                radial-gradient(ellipse 60% 50% at 75% 20%, rgba(0, 113, 227, 0.28) 0%, transparent 55%),
+                radial-gradient(ellipse 50% 40% at 20% 70%, rgba(94, 92, 230, 0.18) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 35% at 85% 80%, rgba(52, 170, 220, 0.12) 0%, transparent 50%);
+            background-attachment: fixed;
             color: #1d1d1f;
             scroll-behavior: smooth;
+            min-height: 100vh;
         }
         .ios-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 10px 15px rgba(0, 0, 0, 0.03);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 1.75rem;
+            box-shadow:
+                0 1px 2px rgba(0,0,0,0.04),
+                0 6px 12px rgba(0,0,0,0.06),
+                0 20px 36px rgba(0,0,0,0.07);
+            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         .ios-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.04), 0 20px 25px rgba(0, 0, 0, 0.05);
+            transform: translateY(-3px);
+            box-shadow:
+                0 2px 4px rgba(0,0,0,0.05),
+                0 10px 20px rgba(0,0,0,0.08),
+                0 32px 48px rgba(0,0,0,0.09);
         }
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: #1d1d1f;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid rgba(0,0,0,0.07);
+        }
+        .profile-ring {
+            background: linear-gradient(135deg, #0071e3 0%, #5e5ce6 60%, #34aadc 100%);
+            padding: 3px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        a { color: inherit; }
     </style>
 </head>
 <body class="antialiased selection:bg-blue-200 selection:text-blue-900">
 
-    <div class="max-w-3xl mx-auto px-6 py-12 md:py-20">
+    <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
         
-        <header class="ios-card p-8 mb-8 flex flex-col md:flex-row items-center md:items-start gap-8">
+        <header class="ios-card p-6 md:p-8 mb-8 flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
 
             <!-- Left: photo + contact links -->
             <div class="flex flex-col items-center gap-4 shrink-0">
-                <img src="assets/profile.jpg" alt="Geoffrey Wang" class="w-32 h-32 rounded-full object-cover shadow-md border-2 border-white">
-                <div class="flex flex-col gap-2 w-36">
-                    <a href="mailto:mn232yw@leeds.ac.uk" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
-                        <i class="fa-solid fa-envelope text-blue-500"></i> Edu
-                    </a>
+                <div class="profile-ring">
+                    <img src="assets/profile.jpg" alt="Geoffrey Wang" class="w-32 h-32 rounded-full object-cover block border-2 border-white">
+                </div>
+                <div class="flex flex-col gap-2 w-44 md:w-36">
+                    <div class="flex gap-2 w-full">
+                        <a href="mailto:mn232yw@leeds.ac.uk" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full flex-1">
+                            <i class="fa-solid fa-envelope text-blue-500"></i> Edu
+                        </a>
+                        <a href="assets/Yecheng WANG CV Feb.pdf" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-bold text-gray-800 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full flex-1">
+                            <i class="fa-solid fa-file-pdf text-red-500"></i> CV
+                        </a>
+                    </div>
                     <a href="mailto:geoffreywang2024@gmail.com" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
                         <i class="fa-solid fa-envelope text-red-500"></i> Gmail
                     </a>
                     <a href="https://github.com/Geoffrey-WANG-1027" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
                         <i class="fa-brands fa-github"></i> GitHub
                     </a>
-                    <a href="assets/Yecheng WANG CV Feb.pdf" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-bold text-gray-800 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
-                        <i class="fa-solid fa-file-pdf text-red-500"></i> CV
-                    </a>
                     <a href="https://www.linkedin.com/in/yecheng-geoffrey-wang/?locale=en-US" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
                         <i class="fa-brands fa-linkedin text-blue-700"></i> LinkedIn
                     </a>
-                    <a href="https://x.com/ThisisGeoW" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
-                        <i class="fa-brands fa-x-twitter"></i> X
-                    </a>
-                    <a href="https://www.instagram.com/thatboygeoffrey/" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
-                        <i class="fa-brands fa-instagram text-pink-500"></i> Ins
-                    </a>
+                    <div class="flex gap-2 w-full">
+                        <a href="https://x.com/ThisisGeoW" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full flex-1">
+                            <i class="fa-brands fa-x-twitter"></i> X
+                        </a>
+                        <a href="https://www.instagram.com/thatboygeoffrey/" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full flex-1">
+                            <i class="fa-brands fa-instagram text-pink-500"></i> Ins
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!-- Right: text content -->
             <div class="flex-1 text-center md:text-left">
-                <h1 class="text-3xl font-bold tracking-tight mb-2">Yecheng (Geoffrey) WANG</h1>
+                <h1 class="text-3xl md:text-4xl font-bold mb-3" style="letter-spacing: -0.03em; line-height: 1.08;">Yecheng (Geoffrey) WANG</h1>
 
                 <div class="flex flex-col gap-2 mb-5 items-center md:items-start">
                     <div class="flex items-center gap-3">
@@ -82,21 +117,21 @@
                     </div>
                 </div>
 
-                <p class="text-sm leading-relaxed text-gray-700 mb-2 text-justify">
+                <p class="leading-relaxed mb-2 text-justify" style="font-size: clamp(15px, 2.2vw, 17px); color: #1d1d1f;">
                     The convergence of <strong>Embodied AI</strong> and <strong>Surgical Robotics</strong> is rewriting what machines can do in an operating room — pushing the field from rigid, operator-bound tools toward systems that learn, adapt, and act with <em>genuine surgical intent</em>. I want to engineer that shift: designing soft, multi-DoF platforms and training them through imitation learning, reinforcement learning, and world models to perform with expert precision wherever that care is needed most.
                 </p>
-                <p class="text-sm text-gray-500 italic mb-4">Making the most advanced technology affordable and accessible.</p>
+                <p class="font-bold mb-4" style="font-size: clamp(14px, 2.2vw, 17px); color: #1d1d1f;">Making the most advanced technology affordable and accessible.</p>
 
                 <div class="flex flex-wrap gap-2 justify-center md:justify-start">
-                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">Python</span>
-                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">C++</span>
-                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">MATLAB</span>
-                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">ROS</span>
-                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">PyTorch</span>
-                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">YOLOv8</span>
-                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">Arduino</span>
-                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">Git</span>
-                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">SolidWorks</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">Python</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">C++</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">MATLAB</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">ROS</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">PyTorch</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">YOLOv8</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">Arduino</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">Git</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">SolidWorks</span>
                 </div>
             </div>
 
@@ -104,7 +139,7 @@
 
 
         <section class="mb-8">
-            <h2 class="text-xl font-bold mb-6 pl-2 border-l-4 border-gray-800">Honors & Awards</h2>
+            <h2 class="section-title">Honors & Awards</h2>
             <div class="ios-card p-6">
                 <div class="space-y-4">
                     <div class="flex items-center justify-between">
@@ -134,7 +169,7 @@
 
 
         <section class="mb-8">
-            <h2 class="text-xl font-bold mb-6 pl-2 border-l-4 border-gray-800">Publications</h2>
+            <h2 class="section-title">Publications</h2>
             <div class="space-y-6">
                 
             <div class="ios-card p-6">
@@ -149,7 +184,7 @@
                     Chengdu, CHINA | SWJTU-Leeds Joint School
                 </p>
                 
-                <p class="text-sm text-gray-700 leading-relaxed mb-5">
+                <p class="text-sm leading-relaxed mb-5" style="color: #6e6e73;">
                     Independently developed an enhanced YOLOv8n algorithm integrating a P2 detection layer, Non-Local Block attention, and BiFPN for complex underwater environments to improve marine benthic organism detection for superior feature extraction and robustness, outperforming baselines with minimal complexity.
                 </p>
 
@@ -169,7 +204,7 @@
 
 
         <section class="mb-8">
-            <h2 class="text-xl font-bold mb-6 pl-2 border-l-4 border-gray-800">Internships</h2>
+            <h2 class="section-title">Internships</h2>
             <div class="space-y-6">
                 
                 <div class="ios-card p-6">
@@ -195,7 +230,7 @@
 
 
         <section class="mb-8">
-            <h2 class="text-xl font-bold mb-6 pl-2 border-l-4 border-gray-800">News</h2>
+            <h2 class="section-title">News</h2>
             <div class="ios-card p-6">
                 <ul class="space-y-3">
                     <li class="flex gap-3 items-baseline">
@@ -208,7 +243,7 @@
 
 
         <section class="mb-8">
-            <h2 class="text-xl font-bold mb-6 pl-2 border-l-4 border-gray-800">Selected Experience & Projects</h2>
+            <h2 class="section-title">Selected Experience & Projects</h2>
             <div class="space-y-6">
 
                 <div class="ios-card p-6">
@@ -221,7 +256,7 @@
                     <p class="text-sm text-gray-500 mb-3 font-medium">
                         Leeds, UK | MECH2636 Assignment 3 | Developer & Modeler
                     </p>
-                    <p class="text-sm text-gray-700 leading-relaxed mb-5">
+                    <p class="text-sm leading-relaxed mb-5" style="color: #6e6e73;">
                         Developed a MATLAB Inverse Kinematics solver and coordinate transformation framework for a 2-DOF robotic arm in a colonoscopy simulator. Engineered a full-stack simulation to validate reachability and automate data pipelines for C++ embedded integration.
                     </p>
                     <div class="flex flex-wrap gap-3">
@@ -249,7 +284,7 @@
                     <p class="text-sm text-gray-500 mb-3 font-medium">
                         Leeds, UK | MECH2636 Assignment 2 | Control Systems Developer & Embodied Systems Engineer
                     </p>
-                    <p class="text-sm text-gray-700 leading-relaxed">
+                    <p class="text-sm leading-relaxed" style="color: #6e6e73;">
                         Engineered a C++ embedded control architecture featuring a Finite State Machine and PI velocity controller for an autonomous delivery buggy. Validated on ReLOAD platform, optimizing PID gains and sensor placement to mitigate wheel slip and diverage and ensure precise payload delivery. <strong>Our team ranked 1st out of all competing teams in the final competition.</strong>
                     </p>
                     <div class="flex flex-wrap gap-3 mt-5">
@@ -269,7 +304,7 @@
                     <p class="text-sm text-gray-500 mb-3 font-medium">
                         Chengdu, China | MECH1010 Coursework | Control Hardware & Software Developer
                     </p>
-                    <p class="text-sm text-gray-700 leading-relaxed">
+                    <p class="text-sm leading-relaxed" style="color: #6e6e73;">
                         Developed an autonomous UAV altitude control system using Arduino and C++, achieving stable hovering within ±0.02m via optimized PID parameters, integrating full-stack hardware and telemetry log analysis.
                     </p>
                 </div>
@@ -284,7 +319,7 @@
                     <p class="text-sm text-gray-500 mb-3 font-medium">
                         Chengdu, China | MECH1206 | MATLAB Modeler & Analyst
                     </p>
-                    <p class="text-sm text-gray-700 leading-relaxed">
+                    <p class="text-sm leading-relaxed" style="color: #6e6e73;">
                         Developed a 2D truss bridge mathematical model using engineering statics and solved a 24-Equation Matrix via MATLAB for load simulation. Created a MATLAB GUI to visualize empirical correlation, successfully predicting vulnerable components and maximum load capacity.
                     </p>
                 </div>
@@ -299,7 +334,7 @@
                     <p class="text-sm text-gray-500 mb-3 font-medium">
                         Chengdu, China | Student Research Training Program | Designer & Hardware & Embodied Developer
                     </p>
-                    <p class="text-sm text-gray-700 leading-relaxed">
+                    <p class="text-sm leading-relaxed" style="color: #6e6e73;">
                         Developed a Raspberry-Pi driven smart cart integrating vision and weight sensors, using an MSDA-enhanced YOLOv8n backbone to achieve 92.4% mAP. Designed a 2-DOF pan-tilt laser pointer feedback mechanism to physically indicate non-recognized items.
                     </p>
                 </div>
