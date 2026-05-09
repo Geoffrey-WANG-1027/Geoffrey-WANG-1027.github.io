@@ -33,59 +33,103 @@
 
     <div class="max-w-3xl mx-auto px-6 py-12 md:py-20">
         
-        <header class="ios-card p-8 mb-8 text-center md:text-left flex flex-col md:flex-row items-center gap-8">
-            <img src="assets/profile.jpg" alt="Geoffrey Wang" class="w-32 h-32 rounded-full object-cover shadow-md border-2 border-white">
-            <div>
+        <header class="ios-card p-8 mb-8 flex flex-col md:flex-row items-center md:items-start gap-8">
+
+            <!-- Left: photo + contact links -->
+            <div class="flex flex-col items-center gap-4 shrink-0">
+                <img src="assets/profile.jpg" alt="Geoffrey Wang" class="w-32 h-32 rounded-full object-cover shadow-md border-2 border-white">
+                <div class="flex flex-col gap-2 w-36">
+                    <a href="mailto:mn232yw@leeds.ac.uk" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
+                        <i class="fa-solid fa-envelope text-blue-500"></i> Edu
+                    </a>
+                    <a href="mailto:geoffreywang2024@gmail.com" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
+                        <i class="fa-solid fa-envelope text-red-500"></i> Gmail
+                    </a>
+                    <a href="https://github.com/Geoffrey-WANG-1027" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a href="assets/Yecheng WANG CV Feb.pdf" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-bold text-gray-800 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
+                        <i class="fa-solid fa-file-pdf text-red-500"></i> CV
+                    </a>
+                    <a href="https://www.linkedin.com/in/yecheng-geoffrey-wang/?locale=en-US" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
+                        <i class="fa-brands fa-linkedin text-blue-700"></i> LinkedIn
+                    </a>
+                    <a href="https://x.com/ThisisGeoW" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
+                        <i class="fa-brands fa-x-twitter"></i> X
+                    </a>
+                    <a href="https://www.instagram.com/thatboygeoffrey/" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
+                        <i class="fa-brands fa-instagram text-pink-500"></i> Ins
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: text content -->
+            <div class="flex-1 text-center md:text-left">
                 <h1 class="text-3xl font-bold tracking-tight mb-2">Yecheng (Geoffrey) WANG</h1>
 
-                <div class="flex flex-col gap-2 mb-6 text-left">
-                <div class="flex items-center gap-3">
-                    <img src="assets/leeds-logo.png" alt="University of Leeds" class="w-5 h-5 object-contain rounded-sm">
-                    <p class="text-gray-500 font-medium m-0">
-                        BEng Mechanical Engineering @ University of Leeds
-                    </p>
+                <div class="flex flex-col gap-2 mb-5 items-center md:items-start">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/leeds-logo.png" alt="University of Leeds" class="w-5 h-5 object-contain rounded-sm">
+                        <p class="text-gray-500 font-medium m-0 text-sm">BEng Mechanical Engineering @ University of Leeds</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <img src="assets/swjtu-logo.png" alt="Southwest Jiaotong University" class="w-5 h-5 object-contain rounded-sm">
+                        <p class="text-gray-500 font-medium m-0 text-sm">BEng Mechanical Engineering @ Southwest Jiaotong University</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-calendar-check text-gray-400 w-5 text-center text-sm"></i>
+                        <p class="text-gray-400 text-sm m-0">Expected Graduation: Jun 2027</p>
+                    </div>
                 </div>
-                
-                <div class="flex items-center gap-3">
-                    <img src="assets/swjtu-logo.png" alt="Southwest Jiaotong University" class="w-5 h-5 object-contain rounded-sm">
-                    <p class="text-gray-500 font-medium m-0">
-                        BEng Mechanical Engineering @ Southwest Jiaotong University
-                    </p>
-                </div>
-            </div>
 
-                <p class="text-sm leading-relaxed text-gray-700">
-                    Passionate about pushing the boundaries of <strong>Robotics Autonomous Systems</strong>. My research interests center around <strong>Medical Robots and Surgical Robots</strong>. I believe in leveraging <strong>World Models and Robot Learning</strong> to build the Next Generation of Intelligent Machines.
+                <p class="text-sm leading-relaxed text-gray-700 mb-2 text-justify">
+                    The convergence of <strong>Embodied AI</strong> and <strong>Surgical Robotics</strong> is rewriting what machines can do in an operating room — pushing the field from rigid, operator-bound tools toward systems that learn, adapt, and act with <em>genuine surgical intent</em>. I want to engineer that shift: designing soft, multi-DoF platforms and training them through imitation learning, reinforcement learning, and world models to perform with expert precision wherever that care is needed most.
                 </p>
+                <p class="text-sm text-gray-500 italic mb-4">Making the most advanced technology affordable and accessible.</p>
 
+                <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">Python</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">C++</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">MATLAB</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">ROS</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">PyTorch</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">YOLOv8</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">Arduino</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">Git</span>
+                    <span class="text-xs font-medium text-gray-600 bg-gray-100 border border-gray-200 px-2.5 py-1 rounded-md">SolidWorks</span>
+                </div>
             </div>
+
         </header>
 
 
-        <section class="flex flex-wrap gap-4 mb-8 justify-center">
-            <a href="mailto:mn232yw@leeds.ac.uk" class="ios-card px-4 py-2 flex items-center gap-2 hover:bg-white text-sm font-medium">
-                <i class="fa-solid fa-envelope text-blue-500"></i> Edu
-            </a>
-            <a href="mailto:geofffreywang2024@gmail.com" class="ios-card px-4 py-2 flex items-center gap-2 hover:bg-white text-sm font-medium">
-                <i class="fa-solid fa-envelope text-red-500"></i> Gmail
-            </a>
-            <a href="https://github.com/Geoffrey-WANG-1027" target="_blank" class="ios-card px-4 py-2 flex items-center gap-2 hover:bg-white text-sm font-medium">
-                <i class="fa-brands fa-github"></i> GitHub
-            </a>
-
-            <a href="assets/Yecheng WANG CV Feb.pdf" target="_blank" class="ios-card px-4 py-2 flex items-center gap-2 hover:bg-white text-sm font-bold text-gray-800">
-                <i class="fa-solid fa-file-pdf text-red-500"></i> CV
-            </a>
-            
-            <a href="https://www.linkedin.com/in/yecheng-geoffrey-wang/?locale=en-US" target="_blank" class="ios-card px-4 py-2 flex items-center gap-2 hover:bg-white text-sm font-medium">
-                <i class="fa-brands fa-linkedin text-blue-700"></i> LinkedIn
-            </a>
-            <a href="https://x.com/ThisisGeoW" target="_blank" class="ios-card px-4 py-2 flex items-center gap-2 hover:bg-white text-sm font-medium">
-                <i class="fa-brands fa-x-twitter"></i> X
-            </a>
-            <a href="https://www.instagram.com/thatboygeoffrey/" target="_blank" class="ios-card px-4 py-2 flex items-center gap-2 hover:bg-white text-sm font-medium">
-                <i class="fa-brands fa-instagram text-pink-500"></i> Ins
-            </a>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-6 pl-2 border-l-4 border-gray-800">Honors & Awards</h2>
+            <div class="ios-card p-6">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-award text-yellow-500"></i>
+                            <div>
+                                <p class="font-semibold text-sm text-gray-900">National Scholarship</p>
+                                <p class="text-xs text-gray-500">SWJTU | Ministry of Education, China</p>
+                            </div>
+                        </div>
+                        <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">Dec 2025</span>
+                    </div>
+                    <div class="border-t border-gray-100"></div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-award text-yellow-500"></i>
+                            <div>
+                                <p class="font-semibold text-sm text-gray-900">National Scholarship</p>
+                                <p class="text-xs text-gray-500">SWJTU | Ministry of Education, China</p>
+                            </div>
+                        </div>
+                        <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">Dec 2024</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
@@ -146,6 +190,19 @@
                     </p>
                 </div>
 
+            </div>
+        </section>
+
+
+        <section class="mb-8">
+            <h2 class="text-xl font-bold mb-6 pl-2 border-l-4 border-gray-800">News</h2>
+            <div class="ios-card p-6">
+                <ul class="space-y-3">
+                    <li class="flex gap-3 items-baseline">
+                        <span class="shrink-0 text-xs font-mono text-gray-700">[Apr 2026]</span>
+                        <span class="text-sm text-gray-700">Accepted into <a href="https://www.summer.cuhk.edu.hk/surp/" target="_blank" class="text-blue-500 hover:underline">CUHK SURP 2026</a> — joining <a href="https://www4.mae.cuhk.edu.hk/peoples/cheng-shing-shin/" target="_blank" class="text-blue-500 hover:underline">Prof. Shing-Shin Cheng</a>'s lab this summer to work on <a href="https://www.summer.cuhk.edu.hk/surp_project/" target="_blank" class="text-blue-500 hover:underline">imitation learning for flexible surgical robots</a>.</span>
+                    </li>
+                </ul>
             </div>
         </section>
 
