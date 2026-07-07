@@ -7,3 +7,6 @@ assets/.DS_Store
 # Local-only submission materials (not for publishing)
 assets/Bridge-Submission/
 assets/SRTP2024/
+
+# Private maintenance notes — never publish
+CLAUDE.md
