@@ -3,3 +3,7 @@ assets/.DS_Store
 .claude/
 *.MOV
 *.mov
+
+# Local-only submission materials (not for publishing)
+assets/Bridge-Submission/
+assets/SRTP2024/
