@@ -8,5 +8,9 @@ assets/.DS_Store
 assets/Bridge-Submission/
 assets/SRTP2024/
 
+# SURP 2026 internal handoff package — context only, never publish
+# (the cleared poster PDF is copied out to assets/ root separately)
+assets/SURP26-Profile-Assets-2026-08-14/
+
 # Private maintenance notes — never publish
 CLAUDE.md
