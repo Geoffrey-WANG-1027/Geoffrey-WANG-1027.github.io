@@ -1,16 +1,10 @@
+# OS / editor junk
 .DS_Store
-assets/.DS_Store
+**/.DS_Store
 .claude/
-*.MOV
-*.mov
 
-# Local-only submission materials (not for publishing)
-assets/Bridge-Submission/
-assets/SRTP2024/
+# Local parking area for files awaiting manual deletion — never publish
+bin/
 
-# SURP 2026 internal handoff package — context only, never publish
-# (the cleared poster PDF is copied out to assets/ root separately)
-assets/SURP26-Profile-Assets-2026-08-14/
-
-# Private maintenance notes — never publish
-CLAUDE.md
+# Rule: private material (transcripts, CV drafts, reviewer edits, submission
+# packages, notes) lives in ../geoffrey-profile-private, NOT in this repo.
