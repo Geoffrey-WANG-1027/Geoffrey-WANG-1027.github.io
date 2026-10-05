@@ -8,3 +8,7 @@ bin/
 
 # Rule: private material (transcripts, CV drafts, reviewer edits, submission
 # packages, notes) lives in ../geoffrey-profile-private, NOT in this repo.
+
+# Claude Code local notes and macOS folder-icon file
+CLAUDE.local.md
+Icon?
