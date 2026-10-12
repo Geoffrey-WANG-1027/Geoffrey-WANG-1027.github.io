@@ -12,3 +12,9 @@ bin/
 # Claude Code local notes and macOS folder-icon file
 CLAUDE.local.md
 Icon?
+
+# Baidu Netdisk sync temp files
+.*.baiduyun.uploading.cfg
+
+# Cowork desktop app drops files sent in chat here — never publish
+Claude outputs/

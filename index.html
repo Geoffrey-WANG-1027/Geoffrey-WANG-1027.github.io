@@ -1,452 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yecheng (Geoffrey) Wang | Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yecheng (Geoffrey) WANG</title>
+  <meta name="description" content="Yecheng (Geoffrey) WANG — final-year Mechanical Engineering undergraduate at the University of Leeds and SWJTU, applying to robotics PhD programs for Fall 2027. Continuum surgical robots and physically grounded motion prediction.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121315" media="(prefers-color-scheme: dark)">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/site/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="180x180" href="assets/site/favicon-180.png">
-    <link rel="apple-touch-icon" href="assets/site/favicon-180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/site/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/site/favicon-180.png">
+  <link rel="apple-touch-icon" href="assets/site/favicon-180.png">
 
-    <!-- SEO -->
-    <meta name="description" content="Yecheng (Geoffrey) Wang — BEng Mechanical Engineering student at University of Leeds & SWJTU, working toward embodied AI and surgical robotics. Publications, projects, and research experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yecheng WANG">
+  <meta property="og:url" content="https://yecheng-wang.com/">
+  <meta property="og:title" content="Yecheng (Geoffrey) WANG">
+  <meta property="og:description" content="Final-year Mechanical Engineering undergraduate (Leeds &amp; SWJTU) applying to robotics PhD programs for Fall 2027. Continuum surgical robot modeling and control; physically grounded motion prediction.">
+  <meta property="og:image" content="https://yecheng-wang.com/assets/site/profile.jpg">
+  <meta property="og:image:width" content="993">
+  <meta property="og:image:height" content="993">
+  <meta property="og:image:alt" content="Portrait of Yecheng (Geoffrey) WANG">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yecheng (Geoffrey) WANG">
+  <meta name="twitter:description" content="Final-year Mechanical Engineering undergraduate (Leeds &amp; SWJTU) applying to robotics PhD programs for Fall 2027. Continuum surgical robot modeling and control; physically grounded motion prediction.">
+  <meta name="twitter:image" content="https://yecheng-wang.com/assets/site/profile.jpg">
+  <meta name="twitter:image:alt" content="Portrait of Yecheng (Geoffrey) WANG">
 
-    <!-- Open Graph (link previews on LinkedIn, X, WeChat, etc.) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yecheng-wang.com/">
-    <meta property="og:title" content="Yecheng (Geoffrey) Wang | Profile">
-    <meta property="og:description" content="BEng Mechanical Engineering @ University of Leeds & SWJTU. Embodied AI × Surgical Robotics — publications, projects, and research experience.">
-    <meta property="og:image" content="https://yecheng-wang.com/assets/site/profile.jpg">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Yecheng (Geoffrey) Wang | Profile">
-    <meta name="twitter:description" content="BEng Mechanical Engineering @ University of Leeds & SWJTU. Embodied AI × Surgical Robotics — publications, projects, and research experience.">
-    <meta name="twitter:image" content="https://yecheng-wang.com/assets/site/profile.jpg">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        :root {
-            --apple-blue: #0071e3;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #eef2f8;
-            background-image:
-                radial-gradient(ellipse 60% 50% at 75% 20%, rgba(0, 113, 227, 0.28) 0%, transparent 55%),
-                radial-gradient(ellipse 50% 40% at 20% 70%, rgba(94, 92, 230, 0.18) 0%, transparent 50%),
-                radial-gradient(ellipse 40% 35% at 85% 80%, rgba(52, 170, 220, 0.12) 0%, transparent 50%);
-            background-attachment: fixed;
-            color: #1d1d1f;
-            scroll-behavior: smooth;
-            min-height: 100vh;
-        }
-        .ios-card {
-            background: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: 1.75rem;
-            box-shadow:
-                0 1px 2px rgba(0,0,0,0.04),
-                0 6px 12px rgba(0,0,0,0.06),
-                0 20px 36px rgba(0,0,0,0.07);
-            transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                        box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .ios-card:hover {
-            transform: translateY(-3px);
-            box-shadow:
-                0 2px 4px rgba(0,0,0,0.05),
-                0 10px 20px rgba(0,0,0,0.08),
-                0 32px 48px rgba(0,0,0,0.09);
-        }
-        .section-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            letter-spacing: -0.025em;
-            color: #1d1d1f;
-            margin-bottom: 1.25rem;
-            padding-bottom: 0.6rem;
-            border-bottom: 1px solid rgba(0,0,0,0.07);
-        }
-        .profile-ring {
-            background: linear-gradient(135deg, #0071e3 0%, #5e5ce6 60%, #34aadc 100%);
-            padding: 3px;
-            border-radius: 50%;
-            display: inline-block;
-        }
-        a { color: inherit; }
-    </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased selection:bg-blue-200 selection:text-blue-900">
+<body>
+<main>
 
-    <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
-        
-        <header class="ios-card p-6 md:p-8 mb-8 flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
-
-            <!-- Left: photo + contact links -->
-            <div class="flex flex-col items-center gap-4 shrink-0">
-                <div class="profile-ring">
-                    <img src="assets/site/profile.jpg" alt="Geoffrey Wang" class="w-32 h-32 rounded-full object-cover block border-2 border-white">
-                </div>
-                <div class="flex flex-col gap-2 w-44 md:w-36">
-                    <div class="flex gap-2 w-full">
-                        <a href="mailto:mn232yw@leeds.ac.uk" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full flex-1">
-                            <i class="fa-solid fa-envelope text-blue-500"></i> Edu
-                        </a>
-                        <a href="assets/CV/20260225_Yecheng_WANG_CV.pdf" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-bold text-gray-800 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full flex-1">
-                            <i class="fa-solid fa-file-pdf text-red-500"></i> CV
-                        </a>
-                    </div>
-                    <a href="mailto:geoffreywang2024@gmail.com" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
-                        <i class="fa-solid fa-envelope text-red-500"></i> Gmail
-                    </a>
-                    <a href="https://github.com/Geoffrey-WANG-1027" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/yecheng-geoffrey-wang/?locale=en-US" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
-                        <i class="fa-brands fa-linkedin text-blue-700"></i> LinkedIn
-                    </a>
-                    <a href="https://x.com/ThisisGeoW" target="_blank" class="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 transition-colors border border-gray-200 px-3 py-1.5 rounded-full w-full">
-                        <i class="fa-brands fa-x-twitter"></i> X
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right: text content -->
-            <div class="flex-1 text-center md:text-left">
-                <h1 class="text-3xl md:text-4xl font-bold mb-3" style="letter-spacing: -0.03em; line-height: 1.08;">Yecheng (Geoffrey) WANG</h1>
-
-                <div class="flex flex-col gap-2 mb-5 items-center md:items-start">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/site/leeds-logo.png" alt="University of Leeds" class="w-5 h-5 object-contain rounded-sm">
-                        <p class="text-gray-500 font-medium m-0 text-sm">BEng Mechanical Engineering @ University of Leeds</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <img src="assets/site/swjtu-logo.png" alt="Southwest Jiaotong University" class="w-5 h-5 object-contain rounded-sm">
-                        <p class="text-gray-500 font-medium m-0 text-sm">BEng Mechanical Engineering @ Southwest Jiaotong University</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-calendar-check text-gray-400 w-5 text-center text-sm"></i>
-                        <p class="text-gray-400 text-sm m-0">Expected Graduation: Jun 2027</p>
-                    </div>
-                </div>
-
-                <p class="leading-relaxed mb-2 text-justify" style="font-size: clamp(15px, 2.2vw, 17px); color: #1d1d1f;">
-                    The convergence of <strong>Embodied AI</strong> and <strong>Surgical Robotics</strong> is rewriting what machines can do in an operating room — pushing the field from rigid, operator-bound tools toward systems that learn, adapt, and act with <em>genuine surgical intent</em>. I want to engineer that shift: designing soft, multi-DoF platforms and training them through imitation learning, reinforcement learning, and world models to perform with expert precision wherever that care is needed most.
-                </p>
-                <p class="font-bold mb-4" style="font-size: clamp(14px, 2.2vw, 17px); color: #1d1d1f;">Making the most advanced technology affordable and accessible.</p>
-
-                <div class="flex flex-wrap gap-1.5 justify-center md:justify-start">
-                    <span class="text-[11px] font-medium text-gray-600 bg-gray-100 border border-gray-200 px-1.5 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">Python</span>
-                    <span class="text-[11px] font-medium text-gray-600 bg-gray-100 border border-gray-200 px-1.5 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">C++</span>
-                    <span class="text-[11px] font-medium text-gray-600 bg-gray-100 border border-gray-200 px-1.5 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">MATLAB</span>
-                    <span class="text-[11px] font-medium text-gray-600 bg-gray-100 border border-gray-200 px-1.5 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">ROS</span>
-                    <span class="text-[11px] font-medium text-gray-600 bg-gray-100 border border-gray-200 px-1.5 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">PyTorch</span>
-                    <span class="text-[11px] font-medium text-gray-600 bg-gray-100 border border-gray-200 px-1.5 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">Computer Vision</span>
-                    <span class="text-[11px] font-medium text-gray-600 bg-gray-100 border border-gray-200 px-1.5 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">Arduino</span>
-                    <span class="text-[11px] font-medium text-gray-600 bg-gray-100 border border-gray-200 px-1.5 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">Git</span>
-                    <span class="text-[11px] font-medium text-gray-600 bg-gray-100 border border-gray-200 px-1.5 py-1 rounded-md transition-colors hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200">SolidWorks</span>
-                </div>
-            </div>
-
-        </header>
-
-
-        <section class="mb-8">
-            <h2 class="section-title">Honors & Awards</h2>
-            <div class="ios-card p-6">
-                <div class="space-y-4">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-award text-yellow-500"></i>
-                            <div>
-                                <p class="font-semibold text-sm text-gray-900">National Scholarship</p>
-                                <p class="text-xs text-gray-500">SWJTU | Ministry of Education, China</p>
-                            </div>
-                        </div>
-                        <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">Dec 2025</span>
-                    </div>
-                    <div class="border-t border-gray-100"></div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-award text-yellow-500"></i>
-                            <div>
-                                <p class="font-semibold text-sm text-gray-900">National Scholarship</p>
-                                <p class="text-xs text-gray-500">SWJTU | Ministry of Education, China</p>
-                            </div>
-                        </div>
-                        <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">Dec 2024</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="mb-8">
-            <h2 class="section-title">Research &amp; Publications</h2>
-            <div class="space-y-6">
-
-            <div class="ios-card p-6">
-                <div class="flex flex-col sm:flex-row justify-between items-start mb-2 gap-3">
-                    <h3 class="font-semibold text-lg leading-tight text-gray-900">From Millimetres to Microns: Hysteresis Characterization and<br class="hidden sm:inline"> Compensation of a Cable-Driven Continuum Surgical Robot</h3>
-                    <div class="flex flex-wrap gap-2 items-center">
-                        <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">
-                            Jun &ndash; Aug 2026
-                        </span>
-                        <a href="https://www.summer.cuhk.edu.hk/surp/" target="_blank" class="shrink-0 text-xs text-blue-700 bg-blue-50 px-3 py-1 rounded-full font-semibold border border-blue-200 hover:bg-blue-100 transition-colors">
-                            CUHK · SURP 2026
-                        </a>
-                    </div>
-                </div>
-
-                <p class="text-sm text-gray-500 mb-3 font-medium">
-                    Hong Kong SAR | The Chinese University of Hong Kong | Undergraduate Research Intern
-                </p>
-
-                <p class="text-sm leading-relaxed mb-5" style="color: #6e6e73;">
-                    Eight-week research internship at the <a href="https://sites.google.com/view/surgicalroboticslab" target="_blank" class="text-blue-500 hover:underline">Surgical Robotics and Instrumentation Laboratory (SRIL)</a>, supervised by <a href="https://www4.mae.cuhk.edu.hk/peoples/cheng-shing-shin/" target="_blank" class="text-blue-500 hover:underline">Prof. Shing-Shin Cheng</a> and mentored by <a href="https://fokkwan.github.io/huojun.github.io/" target="_blank" class="text-blue-500 hover:underline">Dr. Jun HUO</a> — programme project <em>Imitation Learning Framework for Flexible Surgical Robots</em>, scoped by the PI to the metrology and control foundation any learning layer has to stand on. Rebuilt and instrumented a 14-notch cable-driven continuum robot from CAD (micron-level stereo tip tracking, 200 Hz logging) and characterized its dominant error source: path-dependent hysteresis of up to ~0.9 mm. Built a data-driven compensator validated under a preregistered, frozen-prediction protocol — frozen 18 days before a sealed 28-target benchmark, it <strong>cut tip error 3.0× (234 → 78 µm)</strong>; an iterative learning layer on top reached <strong>~15 µm</strong>, the machine's own repeatability floor.
-                </p>
-
-                <div class="flex flex-wrap gap-3">
-                    <a href="assets/SURP2026/SURP2026_Poster_From_Millimetres_to_Microns.pdf" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-red-600 bg-red-50 px-3 py-1.5 rounded-md hover:bg-red-100 transition-colors border border-red-100">
-                        <i class="fa-solid fa-file-pdf"></i> Poster
-                    </a>
-                    <a href="cuhk-surp-2026/" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-md hover:bg-blue-100 transition-colors border border-blue-100">
-                        <i class="fa-solid fa-globe"></i> Project Page
-                    </a>
-                </div>
-            </div>
-
-            <div class="ios-card p-6">
-                <div class="flex flex-col sm:flex-row justify-between items-start mb-2 gap-3">
-                    <h3 class="font-semibold text-lg leading-tight text-gray-900">MBO-YOLO: An Enhanced YOLOv8n-Based Algorithm<br class="hidden sm:inline"> for Detecting Marine Benthic Organisms</h3>
-                    <div class="flex gap-2 items-center">
-                        <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">
-                            Oct 2024 - Apr 2025
-                        </span>
-                        <a href="https://www.aiita.net/" target="_blank" class="shrink-0 text-xs text-blue-700 bg-blue-50 px-3 py-1 rounded-full font-semibold border border-blue-200 hover:bg-blue-100 transition-colors">
-                            IEEE · AIITA 2025
-                        </a>
-                    </div>
-                </div>
-                
-                <p class="text-sm text-gray-500 mb-3 font-medium">
-                    Chengdu, CHINA | SWJTU-Leeds Joint School
-                </p>
-                
-                <p class="text-sm leading-relaxed mb-5" style="color: #6e6e73;">
-                    Independently developed an enhanced YOLOv8n algorithm integrating a P2 detection layer, Non-Local Block attention, and BiFPN for complex underwater environments to improve marine benthic organism detection for superior feature extraction and robustness, outperforming baselines with minimal complexity.
-                </p>
-
-                <div class="flex flex-wrap gap-3">
-                    <a href="https://ieeexplore.ieee.org/document/11047694" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-md hover:bg-blue-100 transition-colors border border-blue-100">
-                        <i class="fa-solid fa-file-pdf"></i> Paper
-                    </a>
-                    
-                    <a href="https://github.com/Geoffrey-WANG-1027/MBO-YOLO" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-800 bg-gray-100 px-3 py-1.5 rounded-md hover:bg-gray-200 transition-colors border border-gray-200">
-                        <i class="fa-brands fa-github"></i> Code
-                    </a>
-                </div>
-            </div>
-
-            </div>
-        </section>
-
-
-        <section class="mb-8">
-            <h2 class="section-title">Internships</h2>
-            <div class="space-y-6">
-                
-                <div class="ios-card p-6">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="font-semibold text-lg">Mechatronics Intern Engineer</h3>
-                        <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">
-                        Jul 2025 - Aug 2025
-                        </span>
-                    </div>
-                    <p class="text-sm text-gray-500 mb-3">
-                        Hangzhou, CHINA | 
-                        <a href="https://en.knewbots.com/" target="_blank" class="hover:text-blue-500 transition-colors duration-200 underline decoration-gray-300 underline-offset-4 hover:decoration-blue-500">
-                            KNEWBOTS
-                        </a>
-                    </p>
-                    <p class="text-sm text-gray-700">
-                        Conducted production-level calibration and large-scale regression case testing (600+ metrics) of multi-sensor SLAM systems on Autonomous Mobile Robots. Diagnosed hardware perception failures and addressed deployment-stage edge cases in multi-sensor fusion and loop closure.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-
-        <section class="mb-8">
-            <h2 class="section-title">News</h2>
-            <div class="ios-card p-6">
-                <ul class="space-y-3">
-                    <li class="flex gap-3 items-baseline">
-                        <span class="shrink-0 text-xs font-mono text-gray-700">[Aug 2026]</span>
-                        <span class="text-sm text-gray-700">Completed <a href="https://www.summer.cuhk.edu.hk/surp/" target="_blank" class="text-blue-500 hover:underline">CUHK SURP 2026</a> at <a href="https://www4.mae.cuhk.edu.hk/peoples/cheng-shing-shin/" target="_blank" class="text-blue-500 hover:underline">Prof. Shing-Shin Cheng</a>'s Surgical Robotics and Instrumentation Lab — presented the poster <a href="cuhk-surp-2026/" class="text-blue-500 hover:underline">"From Millimetres to Microns"</a> at the SURP Poster Presentation Session (13 Aug): 3.0× tip-accuracy gain on a continuum surgical robot, ~15 µm iterative-learning floor.</span>
-                    </li>
-                    <li class="flex gap-3 items-baseline">
-                        <span class="shrink-0 text-xs font-mono text-gray-700">[Apr 2026]</span>
-                        <span class="text-sm text-gray-700">Accepted into <a href="https://www.summer.cuhk.edu.hk/surp/" target="_blank" class="text-blue-500 hover:underline">CUHK SURP 2026</a> — joining <a href="https://www4.mae.cuhk.edu.hk/peoples/cheng-shing-shin/" target="_blank" class="text-blue-500 hover:underline">Prof. Shing-Shin Cheng</a>'s lab this summer to work on <a href="https://www.summer.cuhk.edu.hk/surp_project/" target="_blank" class="text-blue-500 hover:underline">imitation learning for flexible surgical robots</a>.</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-
-        <section class="mb-8">
-            <h2 class="section-title">Selected Experience & Projects</h2>
-            <div class="space-y-6">
-
-                <div class="ios-card p-6">
-                    <div class="flex flex-col sm:flex-row justify-between items-start mb-2 gap-3">
-                        <h3 class="font-semibold text-lg leading-tight text-gray-900">Magnetic Capsule Robotic Arm Navigation System</h3>
-                        <div class="flex flex-wrap gap-2 items-center">
-                            <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">
-                                Feb 2026 - May 2026
-                            </span>
-                            <span class="shrink-0 text-xs text-orange-700 bg-orange-50 px-3 py-1 rounded-full font-semibold border border-orange-200">
-                                🥉 3rd Place
-                            </span>
-                        </div>
-                    </div>
-                    <p class="text-sm text-gray-500 mb-3 font-medium">
-                        Leeds, UK | MECH2636 Assignment 3 | Developer & Modeler
-                    </p>
-                    <p class="text-sm leading-relaxed mb-5" style="color: #6e6e73;">
-                        Developed a MATLAB Inverse Kinematics solver and coordinate transformation framework for a 2-DOF robotic arm in a colonoscopy simulator. Engineered a full-stack simulation to validate reachability and automate data pipelines for C++ embedded integration. In the final inter-team trial, our system completed the Zone 1 navigation task in 24.3 s, placing 3rd.
-                    </p>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="https://yecheng-wang.com/MECH2636-A3b-Team4/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-md hover:bg-blue-100 transition-colors border border-blue-100">
-                            <i class="fa-solid fa-globe"></i> Project Website
-                        </a>
-                        <a href="assets/Colonoscopy/Colonoscopy_Team4_Poster.pdf" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-red-600 bg-red-50 px-3 py-1.5 rounded-md hover:bg-red-100 transition-colors border border-red-100">
-                            <i class="fa-solid fa-file-pdf"></i> Poster
-                        </a>
-                        <a href="https://drive.google.com/file/d/1rrjkqaAxe2o2ySkoFOdLAn-IhrI9FsUY/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1.5 rounded-md hover:bg-purple-100 transition-colors border border-purple-100">
-                            <i class="fa-solid fa-video"></i> Video
-                        </a>
-                        <a href="https://yecheng-wang.com/MECH2636-A3b-Team4/#code" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-800 bg-gray-100 px-3 py-1.5 rounded-md hover:bg-gray-200 transition-colors border border-gray-200">
-                            <i class="fa-solid fa-code"></i> Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ios-card p-6">
-                    <div class="flex flex-col sm:flex-row justify-between items-start mb-2 gap-3">
-                        <h3 class="font-semibold text-lg leading-tight text-gray-900">Autonomous Buggy Control System Design</h3>
-                        <div class="flex flex-wrap gap-2 items-center">
-                            <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">
-                                Nov 2025 - Feb 2026
-                            </span>
-                            <span class="shrink-0 text-xs text-yellow-700 bg-yellow-50 px-3 py-1 rounded-full font-semibold border border-yellow-200">
-                                🏆 Cohort Champions
-                            </span>
-                        </div>
-                    </div>
-                    <p class="text-sm text-gray-500 mb-3 font-medium">
-                        Leeds, UK | MECH2636 Assignment 2 | Control Systems Developer & Embodied Systems Engineer
-                    </p>
-                    <p class="text-sm leading-relaxed" style="color: #6e6e73;">
-                        Engineered a C++ embedded control architecture featuring a Finite State Machine and PI velocity controller for an autonomous delivery buggy. Validated on ReLOAD platform, optimizing PID gains and sensor placement to mitigate wheel slip and divergence and ensure precise payload delivery. <strong>Our team ranked 1st out of all competing teams in the final competition.</strong>
-                    </p>
-                    <div class="flex flex-wrap gap-3 mt-5">
-                        <a href="https://drive.google.com/file/d/1tDfyhSkPPQLBvlEug_h4g9MyPTMVsvAy/view?usp=sharing" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1.5 rounded-md hover:bg-purple-100 transition-colors border border-purple-100">
-                            <i class="fa-solid fa-video"></i> Competition Video
-                        </a>
-                        <a href="assets/Buggy/Buggy2_Poster_Group30.pdf" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-red-600 bg-red-50 px-3 py-1.5 rounded-md hover:bg-red-100 transition-colors border border-red-100">
-                            <i class="fa-solid fa-file-pdf"></i> Poster
-                        </a>
-                        <a href="https://github.com/Geoffrey-WANG-1027/Geoffrey-WANG-1027.github.io/blob/main/assets/Buggy/Buggy-Version_09_04Feb2026.ino" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-800 bg-gray-100 px-3 py-1.5 rounded-md hover:bg-gray-200 transition-colors border border-gray-200">
-                            <i class="fa-brands fa-github"></i> Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ios-card p-6">
-                    <div class="flex flex-col sm:flex-row justify-between items-start mb-2 gap-3">
-                        <h3 class="font-semibold text-lg leading-tight text-gray-900">Helicopter Altitude PID Control System Development</h3>
-                        <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">
-                            Mar 2025 - Apr 2025
-                        </span>
-                    </div>
-                    <p class="text-sm text-gray-500 mb-3 font-medium">
-                        Chengdu, China | MECH1010 Coursework | Control Hardware & Software Developer
-                    </p>
-                    <p class="text-sm leading-relaxed" style="color: #6e6e73;">
-                        Developed an autonomous UAV altitude control system using Arduino and C++, achieving stable hovering within ±0.02m via optimized PID parameters, integrating full-stack hardware and telemetry log analysis.
-                    </p>
-                    <div class="flex flex-wrap gap-3 mt-5">
-                        <a href="assets/Helicopter/Helicopter-success-144-P72-I5.0-D38.mp4" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1.5 rounded-md hover:bg-purple-100 transition-colors border border-purple-100">
-                            <i class="fa-solid fa-video"></i> Video
-                        </a>
-                        <a href="https://github.com/Geoffrey-WANG-1027/Geoffrey-WANG-1027.github.io/blob/main/assets/Helicopter/helicopter-code-submission.ino" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-800 bg-gray-100 px-3 py-1.5 rounded-md hover:bg-gray-200 transition-colors border border-gray-200">
-                            <i class="fa-brands fa-github"></i> Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="ios-card p-6">
-                    <div class="flex flex-col sm:flex-row justify-between items-start mb-2 gap-3">
-                        <h3 class="font-semibold text-lg leading-tight text-gray-900">Bridge Load Analysis, Simulation and Manufacture</h3>
-                        <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">
-                            Mar 2025 - Apr 2025
-                        </span>
-                    </div>
-                    <p class="text-sm text-gray-500 mb-3 font-medium">
-                        Chengdu, China | MECH1206 | MATLAB Modeler & Analyst
-                    </p>
-                    <p class="text-sm leading-relaxed" style="color: #6e6e73;">
-                        Developed a 2D truss bridge mathematical model using engineering statics and solved a 24-Equation Matrix via MATLAB for load simulation. Created a MATLAB GUI to visualize empirical correlation, successfully predicting vulnerable components and maximum load capacity.
-                    </p>
-                    <div class="flex flex-wrap gap-3 mt-5">
-                        <a href="assets/Bridge/Bridge_GUI_Max_Load.png" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-600 bg-teal-50 px-3 py-1.5 rounded-md hover:bg-teal-100 transition-colors border border-teal-100">
-                            <i class="fa-solid fa-image"></i> GUI Screenshot
-                        </a>
-                        <a href="assets/Bridge/Bridge_Model.png" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-600 bg-teal-50 px-3 py-1.5 rounded-md hover:bg-teal-100 transition-colors border border-teal-100">
-                            <i class="fa-solid fa-image"></i> Truss Model
-                        </a>
-                        <a href="https://github.com/Geoffrey-WANG-1027/Geoffrey-WANG-1027.github.io/blob/main/assets/Bridge/Bridge_MATLAB_Programme.m" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-800 bg-gray-100 px-3 py-1.5 rounded-md hover:bg-gray-200 transition-colors border border-gray-200">
-                            <i class="fa-brands fa-github"></i> Code
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="ios-card p-6">
-                    <div class="flex flex-col sm:flex-row justify-between items-start mb-2 gap-3">
-                        <h3 class="font-semibold text-lg leading-tight text-gray-900">YOLO-Based Intelligent Automatic Checkout Cart</h3>
-                        <span class="shrink-0 text-xs text-gray-600 bg-gray-100 px-3 py-1 rounded-full font-medium border border-gray-200">
-                            Apr 2024 - Apr 2025
-                        </span>
-                    </div>
-                    <p class="text-sm text-gray-500 mb-3 font-medium">
-                        Chengdu, China | Student Research Training Program | Designer & Hardware & Embodied Developer
-                    </p>
-                    <p class="text-sm leading-relaxed" style="color: #6e6e73;">
-                        Developed a Raspberry-Pi driven smart cart integrating vision and weight sensors, using an MSDA-enhanced YOLOv8n backbone to achieve 92.4% mAP. Designed a 2-DOF pan-tilt laser pointer feedback mechanism to physically indicate non-recognized items.
-                    </p>
-                    <div class="flex flex-wrap gap-3 mt-5">
-                        <a href="https://drive.google.com/file/d/1BlUWreXHZuj0EXk5a2Ds2V-Xg8t7brg7/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-600 bg-purple-50 px-3 py-1.5 rounded-md hover:bg-purple-100 transition-colors border border-purple-100">
-                            <i class="fa-solid fa-video"></i> Demo Video
-                        </a>
-                        <a href="assets/SRTP2024/SRTP_YOLO_Cart_Slides.pdf" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-red-600 bg-red-50 px-3 py-1.5 rounded-md hover:bg-red-100 transition-colors border border-red-100">
-                            <i class="fa-solid fa-file-pdf"></i> Slides
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <footer class="text-center text-xs text-gray-400 mt-12 mb-4">
-            <p>&copy; 2026 Yecheng Wang.</p>
-            <p class="mt-1">Last updated: August 2026</p>
-        </footer>
-
+  <header class="intro">
+    <div class="intro-side">
+      <img class="portrait" src="assets/site/profile.jpg" alt="Portrait of Yecheng (Geoffrey) WANG" width="993" height="993">
+      <p class="links">
+        <a href="assets/CV/20261012_Yecheng_WANG_CV_preview.pdf">CV</a> /
+        <a href="https://github.com/Geoffrey-WANG-1027">GitHub</a> /
+        <a href="https://www.linkedin.com/in/yecheng-geoffrey-wang/?locale=en-US">LinkedIn</a>
+      </p>
+      <p class="contact">mn232yw@leeds.ac.uk</p>
     </div>
+    <div class="intro-text">
+      <h1>Yecheng (Geoffrey) WANG <span lang="zh-CN">「王烨澄」</span></h1>
+      <p class="status"><span class="status-dot" aria-hidden="true"></span>Applying to PhD programs in robotics · Fall 2027</p>
+      <p class="edu">
+        <span class="edu-line"><img class="edu-logo edu-logo-mono" src="assets/site/leeds-logo.png" alt="" width="20" height="20"><span>BEng Mechanical Engineering @ University of Leeds</span></span>
+        <span class="edu-line"><img class="edu-logo" src="assets/site/swjtu-logo-small.png" alt="" width="20" height="20"><span><span class="edu-part">BEng Mechanical Design, Manufacturing and Automation</span> <span class="edu-part">@ Southwest Jiaotong University (SWJTU)</span></span></span>
+        <span class="edu-line edu-grad"><svg class="edu-icon" viewBox="-2 -2 20 20" width="20" height="20" aria-hidden="true" focusable="false"><rect x="2" y="3" width="12" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M2 6.5h12M5 1.8v2.4M11 1.8v2.4M5.6 10.2l1.6 1.6 3.2-3.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><span class="edu-part">Expected Graduation: Jul 2027</span> <span class="edu-part">(2+2 Joint Program)</span></span></span>
+      </p>
+      <p>
+        Standing at the convergence of Embodied AI and Surgical Robots, I am determined to make the most advanced technology affordable and accessible.
+      </p>
+    </div>
+  </header>
+
+  <dl class="focus">
+    <dt>Goal</dt>
+    <dd>Surgical robots that are precise enough to trust and simple enough to afford.</dd>
+    <dt>Research Interests</dt>
+    <dd>Continuum Robot Modeling and Control · Learning-based Autonomy · Physically Grounded Motion Prediction and Planning.</dd>
+    <dt>Current Question</dt>
+    <dd>How few DoF a flexible endoscopic instrument needs, and how to close the gap between its commanded and actual motion.</dd>
+  </dl>
+
+  <section>
+    <h2>Research</h2>
+
+    <div class="lab">
+      <p class="lab-name">
+        <a href="https://sites.google.com/view/surgicalroboticslab">Surgical Robotics &amp; Instrumentation Lab (SRIL)</a>, CUHK, Hong Kong SAR
+        <span class="date">Jun 2026 – Present</span>
+      </p>
+      <p class="meta">
+        PI: <a href="https://www4.mae.cuhk.edu.hk/peoples/cheng-shing-shin/">Prof.&nbsp;Shing&nbsp;Shin&nbsp;CHENG</a> ·
+        Mentor: <a href="https://fokkwan.github.io/huojun.github.io/">Dr.&nbsp;Jun&nbsp;HUO</a>
+      </p>
+
+      <article class="entry">
+        <div class="thumb"><a href="cuhk-surp-2026/"><img src="assets/site/surp-poster-thumb.jpg" alt="Poster: From Millimetres to Microns (CUHK SURP 2026)" width="480" height="747" loading="lazy"></a></div>
+        <div class="entry-text">
+          <h3>From Millimetres to Microns: Hysteresis Compensation of a Cable-Driven Continuum Surgical Robot</h3>
+          <p class="meta">Jun 2026 – Aug 2026 · CUHK Summer Undergraduate Research Programme</p>
+          <p class="takeaway">Cable hysteresis was the dominant error source; compensating it cut tip error 3.0× (234 → 78 µm), and an iterative learning layer brought it to ~15 µm.</p>
+          <p>
+            I rebuilt a 14-notch tendon-driven continuum surgical robot with stereo tip tracking and cable-tension sensing, and identified path-dependent cable hysteresis as the dominant error source.
+            I then designed a data-driven hysteresis compensator and a P-type iterative learning controller for the 0.25 s vision latency, and showed that tip loading widens the hysteresis loop, contradicting a friction-only assumption.
+            The compensator was validated under a preregistered protocol on a sealed multi-target benchmark; the learning layer then approached the platform’s repeatability limit.
+          </p>
+          <p class="links">
+            <a href="assets/SURP2026/SURP2026_Poster_From_Millimetres_to_Microns.pdf">poster</a> /
+            <a href="cuhk-surp-2026/">project page</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="thumb"></div>
+        <div class="entry-text">
+          <h3>Task-Conditioned Kinematic Coverage of Reduced-DoF Continuum Robots for Endoscopic Surgery</h3>
+          <p class="meta">Aug 2026 – Present</p>
+          <p class="takeaway">Can a fixed-structure 4-DoF continuum arm execute each surgical gesture within position and tool-axis tolerances — and if not, why not?</p>
+          <p>
+            I built a kinematic simulation that tests each gesture against these tolerances, attributes failures to reach or position–axis coupling, and benchmarks four comparators.
+            Next, I plan to replace synthetic primitives with instrument trajectories from open dVRK datasets, identify the arm’s bending structure from EM tip tracking, and validate per-gesture predictions in teleoperation on a dual-arm flexible endoscopic platform.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <article class="entry">
+      <div class="thumb"></div>
+      <div class="entry-text">
+        <h3>Physically Grounded Counterfactual World Models for Explainable Motion Prediction and Planning</h3>
+        <p class="meta">Dec 2025 – Present · KineWorld (AAAI 2027, advanced to Phase 2) · PHLEX (ICLR 2027, under review)</p>
+        <p class="takeaway">Explain a frozen predictor’s trajectories with differentiable motion mechanisms, then re-run those explanations as physically grounded counterfactual futures.</p>
+        <p>
+          <strong>KineWorld</strong> is a pluggable world model that decodes a frozen predictor’s trajectories against a library of differentiable motion mechanisms, giving interpretable behavior attribution and counterfactual rollouts; on UniAD/nuScenes it lowered maximum yaw rate from 0.986 to 0.640 rad/s and raised mechanism self-consistency from 8.45% to 57.27%, with gains in comfort, safety and planning accuracy.
+        </p>  
+        <p>  
+          <strong>PHLEX</strong> extends the library into a predictor-agnostic framework that explains predicted trajectories through layered kinematic models, control laws and scene references, and re-runs varied explanations as counterfactual futures for ego planning.
+          On three frozen planners (UniAD, VAD, SparseDrive) it cut collision rate by up to half and yaw-rate violations by 1.9–6.7 pp, and in agent forecasting (UniAD/MTR/QCNet on nuScenes/Argoverse 2) it reduced kinematic violations by &gt;80% for ≤0.05 m minFDE.
+        </p>
+        <p class="meta">Co-researcher, with a PhD student at Purdue University</p>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <ul class="pubs">
+      <li>
+        <p class="pub-title">PHLEX: Physically Layered Explanation for Counterfactual Motion Planning</p>
+        <p class="authors"><strong>Y. Wang</strong>, Y. Li</p>
+        <p class="venue"><span class="badge">ICLR 2027</span> under review</p>
+      </li>
+      <li>
+        <p class="pub-title">KineWorld: A Pluggable Counterfactual Kinematic World Model for Physically Grounding Multimodal Motion Prediction</p>
+        <p class="authors"><strong>Y. Wang</strong>, Y. Li</p>
+        <p class="venue"><span class="badge">AAAI 2027</span> advanced to Phase 2</p>
+      </li>
+      <li>
+        <p class="pub-title">MBO-YOLO: An Enhanced YOLOv8n-Based Algorithm for Detecting Marine Benthic Organisms</p>
+        <p class="authors"><strong>Y. Wang</strong></p>
+        <p class="venue"><span class="badge">AIITA 2025</span> Xi’an, China · pp. 854–860 · DOI: 10.1109/AIITA65135.2025.11047694</p>
+        <p class="links">
+          <a href="https://doi.org/10.1109/AIITA65135.2025.11047694">Paper</a> ·
+          <a href="https://github.com/Geoffrey-WANG-1027/MBO-YOLO">Code</a>
+        </p>
+        <p class="pub-note">Integrated a P2 detection head, Non-Local Block attention and BiFPN into YOLOv8n for small, blurred underwater targets: +2.2 pp mAP50 and +2.9 pp mAP50:95 over the baseline on URPC2020.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Honors</h2>
+    <ul class="honors">
+      <li><span>🥇 National Scholarship, Ministry of Education of China (top 0.2%)</span> <span class="date">Dec 2024</span></li>
+      <li><span>🥇 National Scholarship, Ministry of Education of China (top 0.2%)</span> <span class="date">Dec 2025</span></li>
+      <li><span>🏆 Cohort Champion, Autonomous Buggy Competition, University of Leeds</span> <span class="date">Feb 2026</span></li>
+      <li><span>🥉 Third Place, Magnetic Capsule Robot Arm Navigation, University of Leeds</span> <span class="date">May 2026</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Selected Projects</h2>
+    <ul class="projects">
+      <li>
+        <span class="proj-title">Magnetic Capsule Robotic Arm Navigation System</span> <span class="date">Feb 2026 – May 2026</span><br>
+        Wrote the inverse-kinematics solver and reachability simulation for a 2-DoF planar arm steering a magnetic capsule in a colonoscopy simulator, plus the pipeline turning trajectories into motor counts for embedded C++; 3rd in the inter-team trial.
+        <span class="links">
+          <a href="https://yecheng-wang.com/MECH2636-A3b-Team4/">project site</a> /
+          <a href="assets/Colonoscopy/Colonoscopy_Team4_Poster.pdf">poster</a> /
+          <a href="https://drive.google.com/file/d/1rrjkqaAxe2o2ySkoFOdLAn-IhrI9FsUY/view?usp=sharing">video</a> /
+          <a href="https://yecheng-wang.com/MECH2636-A3b-Team4/#code">code</a>
+        </span>
+      </li>
+      <li>
+        <span class="proj-title">Autonomous Delivery Buggy Control System</span> <span class="date">Nov 2025 – Feb 2026</span><br>
+        Designed the embedded control architecture — a finite-state mission manager and closed-loop PI velocity control with wheel synchronization; the competition run used the simpler open-loop FSM configuration for repeatability and ranked 1st of all teams.
+        <span class="links">
+          <a href="https://drive.google.com/file/d/1tDfyhSkPPQLBvlEug_h4g9MyPTMVsvAy/view?usp=sharing">competition video</a> /
+          <a href="assets/Buggy/Buggy2_Poster_Group30.pdf">poster</a> /
+          <a href="https://github.com/Geoffrey-WANG-1027/Geoffrey-WANG-1027.github.io/blob/main/assets/Buggy/Buggy-Version_09_04Feb2026.ino">code</a>
+        </span>
+      </li>
+      <li>
+        <span class="proj-title">Vibration Isolation Platform Design</span> <span class="date">Feb 2026 – Mar 2026</span><br>
+        Led the modeling in a team of 4: grid-searched the stiffness and damping of a base-excited SDOF isolator to cut peak acceleration from 11.4 to 5.3 m/s² (limit 9 m/s²), and recommended it over a 2-DoF tuned mass absorber for robustness against the absorber’s undamped resonances.
+      </li>
+    </ul>
+
+    <details class="more">
+      <summary>More projects</summary>
+      <ul class="projects">
+        <li>
+          <span class="proj-title">Helicopter Altitude Control</span> <span class="date">Mar 2025 – Apr 2025</span><br>
+          Implemented and tuned a PID altitude controller for a tethered single-axis helicopter rig, run remotely on the University of Leeds ReLOAD platform: take-off, timed hover within ±2 cm of the target height, and landing.
+          <span class="links">
+            <a href="assets/Helicopter/Helicopter-success-144-P72-I5.0-D38.mp4">video</a> /
+            <a href="https://github.com/Geoffrey-WANG-1027/Geoffrey-WANG-1027.github.io/blob/main/assets/Helicopter/helicopter-code-submission.ino">code</a>
+          </span>
+        </li>
+        <li>
+          <span class="proj-title">Bridge Load Analysis, Simulation and Manufacture</span> <span class="date">Mar 2025 – Apr 2025</span><br>
+          Modeled a 2D truss bridge from engineering statics, solved the 24-equation system in MATLAB for load simulation, and built a MATLAB GUI that predicts vulnerable members and maximum load capacity.
+          <span class="links">
+            <a href="assets/Bridge/Bridge_GUI_Max_Load.png">GUI screenshot</a> /
+            <a href="assets/Bridge/Bridge_Model.png">truss model</a> /
+            <a href="https://github.com/Geoffrey-WANG-1027/Geoffrey-WANG-1027.github.io/blob/main/assets/Bridge/Bridge_MATLAB_Programme.m">code</a>
+          </span>
+        </li>
+        <li>
+          <span class="proj-title">YOLO-Based Automatic-Checkout Cart</span> <span class="date">Apr 2024 – Apr 2025</span><br>
+          Built a Raspberry Pi 5 cart prototype fusing a fisheye camera and a load cell, with a 2-DoF pan-tilt laser pointer that flags unrecognized items; a YOLOv8n with Multi-Scale Dilated Attention reached 92.4% mAP@0.5 at &lt;1 s/item on the edge device.
+          <span class="links">
+            <a href="https://drive.google.com/file/d/1BlUWreXHZuj0EXk5a2Ds2V-Xg8t7brg7/view?usp=drive_link">demo video</a> /
+            <a href="assets/SRTP2024/SRTP_YOLO_Cart_Slides.pdf">slides</a>
+          </span>
+        </li>
+      </ul>
+    </details>
+  </section>
+
+  <section>
+    <h2>Internship</h2>
+    <ul class="projects">
+      <li>
+        <span class="proj-head"><span class="proj-title">Mechatronics Engineer Intern</span>, <a href="https://en.knewbots.com/">KNEWBOTS</a> (Hangzhou Xiaowu Intelligence), Hangzhou, China <span class="date">Jul 2025 – Aug 2025</span></span><br>
+        Calibrated multi-sensor SLAM (LiDAR, ToF camera, ultrasound) on lift and forklift AMRs on the production line, validating mapping and localization through LiDAR point-cloud distributions in RViz.
+        Diagnosed perception failures caused by mechanical misalignment, regression-tested the ROS-based navigation stack against more than 600 validation metrics, and traced deployment edge cases in sensor fusion and loop closure.
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p class="updated">© 2026 Yecheng WANG</p>
+    <p class="updated">Last updated: October 2026</p>
+  </footer>
+
+</main>
 </body>
 </html>

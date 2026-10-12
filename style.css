@@ -1,0 +1,284 @@
+/* ---------- Design tokens ---------- */
+:root {
+  color-scheme: light dark;
+
+  /* colour */
+  --bg: #ffffff;
+  --surface: #f6f6f4;
+  --text: #1f1f1f;
+  --muted: #646464;
+  --faint: #9a9a96;
+  --rule: #e4e4e0;
+  --link: #1a5fb4;
+  --link-hover: #c4540a;
+  --focus: #1a5fb4;
+  --badge-bg: #eef2f8;
+  --badge-border: #d3deec;
+  --badge-text: #2b4a74;
+  --status-dot: #2f9e5b;
+  --mono-logo-filter: none;
+
+  /* type: serif for reading, sans for titles and labels; system fonts only */
+  --font-serif: ui-serif, "New York", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, Cambria, "Times New Roman", "Songti SC", "Noto Serif CJK SC", serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --fs-body: 17px;
+  --fs-label: 14px;
+  --fs-badge: 12.5px;
+  --fs-h1: 30px;
+  --fs-h2: 19px;
+  --fs-h3: 16px;
+  --lh-body: 1.6;
+  --lh-tight: 1.35;
+
+  /* space and layout */
+  --measure: 780px;
+  --gutter: 16px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 40px;
+  --radius: 6px;
+  --radius-portrait: 12px;
+  --portrait: 168px;
+  --thumb-w: 180px;
+
+  /* motion */
+  --dur: 150ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121315;
+    --surface: #1b1d20;
+    --text: #e7e5e1;
+    --muted: #a3a19c;
+    --faint: #7a7874;
+    --rule: #2c2e32;
+    --link: #79b0f2;
+    --link-hover: #f2a65a;
+    --focus: #79b0f2;
+    --badge-bg: #1d2633;
+    --badge-border: #2f4360;
+    --badge-text: #b5cdf0;
+    --status-dot: #4cc27d;
+    --mono-logo-filter: invert(1);   /* black Leeds square becomes white; its transparent tower stays see-through */
+  }
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+main {
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: var(--space-6) var(--gutter) var(--space-5);
+}
+
+p { margin: 0 0 var(--space-3); }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color var(--dur) ease;
+}
+a:hover { color: var(--link-hover); text-decoration: underline; }
+a:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Titles and labels use the sans stack */
+h1, h2, h3,
+.status, .links, .contact, .meta, .date, .badge, .venue,
+.focus dt, .lab-name, .pub-title, .proj-title, .more summary, footer {
+  font-family: var(--font-sans);
+}
+
+h1 { font-size: var(--fs-h1); font-weight: 600; line-height: 1.2; margin: 0 0 var(--space-2); }
+section { margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--rule); }
+h2 { font-size: var(--fs-h2); font-weight: 600; margin: 0 0 var(--space-3); }
+h3 { font-size: var(--fs-h3); font-weight: 600; line-height: var(--lh-tight); margin: 0 0 var(--space-1); }
+
+.meta, .date, .contact { color: var(--muted); font-size: var(--fs-label); }
+.links { font-size: var(--fs-label); }
+.date { white-space: nowrap; font-weight: 400; }
+
+/* ---------- Header ---------- */
+.intro { display: flex; align-items: flex-start; gap: var(--space-5); }
+.intro-text { flex: 1; min-width: 0; }
+.intro-text > p:not([class]) { text-wrap: balance; text-wrap: pretty; }   /* bio: no one-word last line; balance where pretty is unsupported */
+.intro-side { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 5px; }   /* portrait top sits on the h1 cap line */
+.intro-side .links { margin: var(--space-3) 0 2px; }
+.intro-side .contact { margin: 0; }
+.portrait {
+  flex: 0 0 auto;
+  width: var(--portrait);
+  height: var(--portrait);
+  border-radius: var(--radius-portrait);
+  object-fit: cover;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  padding: 3px var(--space-3);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+.status-dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--status-dot);
+}
+
+/* Education: one row per line, 20 px mark + 12 px gap + muted text (after the old site's rows) */
+.edu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--fs-label);
+  line-height: 1.4;
+}
+.edu-line { display: flex; align-items: flex-start; gap: var(--space-3); color: var(--muted); font-weight: 500; }   /* mark aligns with the first line, not the block centre */
+.edu-grad { font-weight: 400; }
+.edu-line > span { text-wrap: balance; }
+.edu-part { display: inline-block; }   /* a long line breaks between parts, e.g. before "@ Southwest…" */
+.edu-logo {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 3px;
+}
+.edu-logo-mono { filter: var(--mono-logo-filter); }
+.edu-icon { flex: 0 0 auto; width: 20px; height: 20px; color: var(--faint); }
+
+/* Goal / interests / current question */
+.focus {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-1) var(--space-4);
+  margin: var(--space-5) 0 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+.focus dt { font-weight: 600; font-size: var(--fs-label); line-height: var(--lh-body); padding-top: 2px; }
+.focus dd { margin: 0; }
+
+/* ---------- Research ---------- */
+.lab { margin-bottom: var(--space-3); }
+.lab-name { font-weight: 600; margin-bottom: 0; }
+.lab > .meta { margin-bottom: var(--space-2); }
+.lab .entry { margin-left: 2px; padding-left: var(--space-4); border-left: 2px solid var(--rule); }
+
+.entry { display: flex; gap: var(--space-4); padding: var(--space-3) 0; }
+.thumb { flex: 0 0 var(--thumb-w); }
+.thumb:empty { display: none; }
+.lab .thumb:empty { display: block; }   /* keeps P2 text aligned with P1 inside the lab block */
+.thumb img { display: block; width: var(--thumb-w); height: auto; border: 1px solid var(--rule); border-radius: var(--radius); }
+.entry-text { flex: 1; min-width: 0; }
+section > .entry h3 { font-size: var(--fs-body); }   /* top-level entry title = same size as .lab-name / .proj-title */
+.takeaway { font-style: italic; }
+
+/* ---------- Publications ---------- */
+.pubs { list-style: none; padding: 0; margin: 0; }
+.pubs li { margin-bottom: var(--space-4); }
+.pubs p { margin-bottom: 2px; }
+.pub-title { font-weight: 600; font-size: var(--fs-body); line-height: var(--lh-tight); }
+.venue { color: var(--muted); font-size: var(--fs-label); overflow-wrap: anywhere; }
+.badge {
+  display: inline-block;
+  margin-right: var(--space-1);
+  padding: 0 7px;
+  border: 1px solid var(--badge-border);
+  border-radius: 4px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: var(--fs-badge);
+  font-weight: 600;
+  line-height: 1.6;
+}
+.pub-note { margin-top: var(--space-1); }
+
+/* ---------- Honors ---------- */
+.honors { list-style: none; padding: 0; margin: 0; }
+.honors li { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-4); margin-bottom: var(--space-1); }
+
+/* ---------- Projects, internship ---------- */
+.projects { list-style: none; padding: 0; margin: 0; }
+.projects li { margin-bottom: var(--space-4); }
+.proj-title { font-weight: 600; }
+.proj-head { font-family: var(--font-sans); }
+.projects .links { display: block; }
+
+.more summary { cursor: pointer; color: var(--link); font-size: var(--fs-label); margin-bottom: var(--space-3); transition: color var(--dur) ease; }
+.more summary:hover { color: var(--link-hover); }
+
+/* ---------- Consistent space above each section rule ---------- */
+section > :last-child { margin-bottom: 0; }
+.lab > :last-child, .entry-text > :last-child { margin-bottom: 0; }
+section > .entry:last-child { padding-bottom: 0; }
+section > :last-child > li:last-child { margin-bottom: 0; }   /* only the list that closes the section */
+.pubs li:last-child > :last-child { margin-bottom: 0; }
+.more summary { margin-bottom: 0; }
+.more[open] summary { margin-bottom: var(--space-3); }
+
+/* ---------- Footer ---------- */
+footer { margin-top: var(--space-6); padding-top: var(--space-3); border-top: 1px solid var(--rule); text-align: center; }
+footer p { margin: 0 0 2px; }
+.updated { color: var(--muted); font-size: 13px; }
+
+/* ---------- Narrow screens (single breakpoint) ---------- */
+@media (max-width: 600px) {
+  :root { --fs-body: 16px; --fs-h1: 26px; --portrait: 140px; }
+  main { padding-top: 32px; }
+  .intro { flex-direction: column; align-items: stretch; gap: var(--space-2); }
+  .intro-side { display: contents; }
+  .intro-side .portrait { order: -1; align-self: center; margin-bottom: var(--space-3); }
+  .intro-text { order: 0; }
+  .intro-side .links, .intro-side .contact { order: 1; text-align: center; }
+  .intro-side .links { margin-top: var(--space-2); }
+  h1 span[lang="zh-CN"] { display: block; margin-left: -0.5em; }   /* 「 carries a blank left half; pull it back to the margin */
+  .focus { grid-template-columns: 1fr; gap: 0; }
+  .focus dd { margin-bottom: var(--space-2); }
+  .entry { flex-direction: column; gap: var(--space-2); }
+  .thumb { flex-basis: auto; }
+  .lab .thumb:empty { display: none; }
+  .thumb img { width: 50%; }
+  .lab .entry { padding-left: var(--space-3); }
+  .honors li { flex-direction: column; gap: 0; margin-bottom: var(--space-2); }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
