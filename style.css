@@ -199,9 +199,15 @@ h3 { font-size: var(--fs-h3); font-weight: 600; line-height: var(--lh-tight); ma
 .thumb { flex: 0 0 var(--thumb-w); }
 .thumb:empty { display: none; }
 .lab .thumb:empty { display: block; }   /* keeps P2 text aligned with P1 inside the lab block */
-.thumb img { display: block; width: var(--thumb-w); height: auto; border: 1px solid var(--rule); border-radius: var(--radius); }
+.thumb img, .thumb video { display: block; width: var(--thumb-w); height: auto; border: 1px solid var(--rule); border-radius: var(--radius); }
+.thumb video { background: var(--surface); }   /* placeholder until the still frame loads */
+figure.thumb { margin: 0; }
+.thumb figcaption { margin-top: 2px; color: var(--muted); font-family: var(--font-sans); font-size: var(--fs-badge); text-align: center; }
 .entry-text { flex: 1; min-width: 0; }
-section > .entry h3 { font-size: var(--fs-body); }   /* top-level entry title = same size as .lab-name / .proj-title */
+.entry-text p { text-wrap: pretty; }   /* no one-word last line where supported */
+section > .entry h3, .group > h3 { font-size: var(--fs-body); }   /* top-level entry title = same size as .lab-name / .proj-title */
+.group { padding-top: var(--space-3); }   /* full-width head, then one figure + paragraph row per paper */
+.group .entry { padding: 0; margin-bottom: var(--space-3); }
 .takeaway { font-style: italic; }
 
 /* ---------- Publications ---------- */
@@ -234,13 +240,14 @@ section > .entry h3 { font-size: var(--fs-body); }   /* top-level entry title = 
 .proj-title { font-weight: 600; }
 .proj-head { font-family: var(--font-sans); }
 .projects .links { display: block; }
+.projects .entry { padding: 0; }   /* project with a clip: same rhythm as a plain project row */
 
 .more summary { cursor: pointer; color: var(--link); font-size: var(--fs-label); margin-bottom: var(--space-3); transition: color var(--dur) ease; }
 .more summary:hover { color: var(--link-hover); }
 
 /* ---------- Consistent space above each section rule ---------- */
 section > :last-child { margin-bottom: 0; }
-.lab > :last-child, .entry-text > :last-child { margin-bottom: 0; }
+.lab > :last-child, .group > :last-child, .entry-text > :last-child { margin-bottom: 0; }
 section > .entry:last-child { padding-bottom: 0; }
 section > :last-child > li:last-child { margin-bottom: 0; }   /* only the list that closes the section */
 .pubs li:last-child > :last-child { margin-bottom: 0; }
@@ -268,7 +275,9 @@ footer p { margin: 0 0 2px; }
   .entry { flex-direction: column; gap: var(--space-2); }
   .thumb { flex-basis: auto; }
   .lab .thumb:empty { display: none; }
-  .thumb img { width: 50%; }
+  .thumb img, .thumb video { width: 50%; }
+  figure.thumb { width: 50%; }   /* caption centred under the half-width figure */
+  figure.thumb img { width: 100%; }
   .lab .entry { padding-left: var(--space-3); }
   .honors li { flex-direction: column; gap: 0; margin-bottom: var(--space-2); }
 }

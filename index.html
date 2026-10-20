@@ -111,21 +111,28 @@
       </article>
     </div>
 
-    <article class="entry">
-      <div class="thumb"></div>
-      <div class="entry-text">
-        <h3>Physically Grounded Counterfactual World Models for Explainable Motion Prediction and Planning</h3>
-        <p class="meta">Dec 2025 – Present · KineWorld (AAAI 2027, advanced to Phase 2) · PHLEX (ICLR 2027, under review)</p>
-        <p class="takeaway">Explain a frozen predictor’s trajectories with differentiable motion mechanisms, then re-run those explanations as physically grounded counterfactual futures.</p>
-        <p>
-          <strong>KineWorld</strong> is a pluggable world model that decodes a frozen predictor’s trajectories against a library of differentiable motion mechanisms, giving interpretable behavior attribution and counterfactual rollouts; on UniAD/nuScenes it lowered maximum yaw rate from 0.986 to 0.640 rad/s and raised mechanism self-consistency from 8.45% to 57.27%, with gains in comfort, safety and planning accuracy.
-        </p>  
-        <p>  
-          <strong>PHLEX</strong> extends the library into a predictor-agnostic framework that explains predicted trajectories through layered kinematic models, control laws and scene references, and re-runs varied explanations as counterfactual futures for ego planning.
-          On three frozen planners (UniAD, VAD, SparseDrive) it cut collision rate by up to half and yaw-rate violations by 1.9–6.7 pp, and in agent forecasting (UniAD/MTR/QCNet on nuScenes/Argoverse 2) it reduced kinematic violations by &gt;80% for ≤0.05 m minFDE.
-        </p>
-        <p class="meta">Co-researcher, with a PhD student at Purdue University</p>
+    <article class="group">
+      <h3>Physically Grounded Counterfactual World Models for Explainable Motion Prediction and Planning</h3>
+      <p class="meta">Dec 2025 – Present · KineWorld (AAAI 2027, advanced to Phase 2) · PHLEX (ICLR 2027, under review)</p>
+      <p class="takeaway">Explain a frozen predictor’s trajectories with differentiable motion mechanisms, then re-run those explanations as physically grounded counterfactual futures.</p>
+      <div class="entry">
+        <figure class="thumb"><a href="assets/KineWorld/KineWorld-overview.jpg"><img src="assets/KineWorld/KineWorld-thumb.jpg" alt="KineWorld overview: standard multimodal predictors show mode collapse or kinematically infeasible trajectories; a frozen predictor with KineWorld yields diverse, feasible ones" width="480" height="355" loading="lazy"></a><figcaption>KineWorld</figcaption></figure>
+        <div class="entry-text">
+          <p>
+            <strong>KineWorld</strong> is a pluggable world model that decodes a frozen predictor’s trajectories against a library of differentiable motion mechanisms, giving interpretable behavior attribution and counterfactual rollouts; on UniAD/<wbr>nuScenes it lowered maximum yaw rate from 0.986 to 0.640&nbsp;rad/s and raised mechanism self-consistency from 8.45% to 57.27%, with gains in comfort, safety and planning accuracy.
+          </p>
+        </div>
       </div>
+      <div class="entry">
+        <figure class="thumb"><a href="assets/PHLEX/PHLEX-overview.jpg"><img src="assets/PHLEX/PHLEX-thumb.jpg" alt="PHLEX overview (excerpt): a black-box predictor’s trajectories explained through kinematic, control-law and scene-reference layers" width="480" height="356" loading="lazy"></a><figcaption>PHLEX</figcaption></figure>
+        <div class="entry-text">
+          <p>
+            <strong>PHLEX</strong> extends the library into a predictor-agnostic framework that explains predicted trajectories through layered kinematic models, control laws and scene references, and re-runs varied explanations as counterfactual futures for ego planning.
+            On three frozen planners (UniAD, VAD, SparseDrive) it cut collision rate by up to half and yaw-rate violations by 1.9–6.7&nbsp;pp, and in agent forecasting (UniAD/<wbr>MTR/<wbr>QCNet on nuScenes/<wbr>Argoverse&nbsp;2) it reduced kinematic violations by &gt;80% for ≤0.05&nbsp;m minFDE.
+          </p>
+        </div>
+      </div>
+      <p class="meta">Co-researcher, with a PhD student at Purdue University</p>
     </article>
   </section>
 
@@ -158,9 +165,9 @@
   <section>
     <h2>Honors</h2>
     <ul class="honors">
-      <li><span>🥇 National Scholarship, Ministry of Education of China (top 0.2%)</span> <span class="date">Dec 2024</span></li>
-      <li><span>🥇 National Scholarship, Ministry of Education of China (top 0.2%)</span> <span class="date">Dec 2025</span></li>
-      <li><span>🏆 Cohort Champion, Autonomous Buggy Competition, University of Leeds</span> <span class="date">Feb 2026</span></li>
+      <li><span>🏆 National Scholarship, Ministry of Education of China (top 0.2%)</span> <span class="date">Dec 2024</span></li>
+      <li><span>🏆 National Scholarship, Ministry of Education of China (top 0.2%)</span> <span class="date">Dec 2025</span></li>
+      <li><span>🥇 Cohort Champion, Autonomous Buggy Competition, University of Leeds</span> <span class="date">Feb 2026</span></li>
       <li><span>🥉 Third Place, Magnetic Capsule Robot Arm Navigation, University of Leeds</span> <span class="date">May 2026</span></li>
     </ul>
   </section>
@@ -168,41 +175,56 @@
   <section>
     <h2>Selected Projects</h2>
     <ul class="projects">
-      <li>
-        <span class="proj-title">Magnetic Capsule Robotic Arm Navigation System</span> <span class="date">Feb 2026 – May 2026</span><br>
-        Wrote the inverse-kinematics solver and reachability simulation for a 2-DoF planar arm steering a magnetic capsule in a colonoscopy simulator, plus the pipeline turning trajectories into motor counts for embedded C++; 3rd in the inter-team trial.
-        <span class="links">
-          <a href="https://yecheng-wang.com/MECH2636-A3b-Team4/">project site</a> /
-          <a href="assets/Colonoscopy/Colonoscopy_Team4_Poster.pdf">poster</a> /
-          <a href="https://drive.google.com/file/d/1rrjkqaAxe2o2ySkoFOdLAn-IhrI9FsUY/view?usp=sharing">video</a> /
-          <a href="https://yecheng-wang.com/MECH2636-A3b-Team4/#code">code</a>
-        </span>
+      <li class="entry">
+        <div class="thumb"><a href="https://drive.google.com/file/d/1rrjkqaAxe2o2ySkoFOdLAn-IhrI9FsUY/view?usp=sharing" aria-label="Full video: magnetic capsule robotic arm"><video src="assets/Colonoscopy/RobotArm.mp4" poster="assets/Colonoscopy/RobotArm.jpg" width="480" height="480" autoplay muted loop playsinline disablepictureinpicture></video></a></div>
+        <div class="entry-text">
+          <span class="proj-title">Magnetic Capsule Robotic Arm Navigation System</span> <span class="date">Feb 2026 – May 2026</span><br>
+          Wrote the inverse-kinematics solver and reachability simulation for a 2-DoF planar arm steering a magnetic capsule in a colonoscopy simulator, plus the pipeline turning trajectories into motor counts for embedded C++; 3rd in the inter-team trial 🥉.
+          <span class="links">
+            <a href="https://yecheng-wang.com/MECH2636-A3b-Team4/">project site</a> /
+            <a href="assets/Colonoscopy/Colonoscopy_Team4_Poster.pdf">poster</a> /
+            <a href="https://drive.google.com/file/d/1rrjkqaAxe2o2ySkoFOdLAn-IhrI9FsUY/view?usp=sharing">video</a> /
+            <a href="https://yecheng-wang.com/MECH2636-A3b-Team4/#code">code</a>
+          </span>
+        </div>
       </li>
-      <li>
-        <span class="proj-title">Autonomous Delivery Buggy Control System</span> <span class="date">Nov 2025 – Feb 2026</span><br>
-        Designed the embedded control architecture — a finite-state mission manager and closed-loop PI velocity control with wheel synchronization; the competition run used the simpler open-loop FSM configuration for repeatability and ranked 1st of all teams.
-        <span class="links">
-          <a href="https://drive.google.com/file/d/1tDfyhSkPPQLBvlEug_h4g9MyPTMVsvAy/view?usp=sharing">competition video</a> /
-          <a href="assets/Buggy/Buggy2_Poster_Group30.pdf">poster</a> /
-          <a href="https://github.com/Geoffrey-WANG-1027/Geoffrey-WANG-1027.github.io/blob/main/assets/Buggy/Buggy-Version_09_04Feb2026.ino">code</a>
-        </span>
+      <li class="entry">
+        <div class="thumb"><a href="https://drive.google.com/file/d/1tDfyhSkPPQLBvlEug_h4g9MyPTMVsvAy/view?usp=sharing" aria-label="Full competition video: autonomous delivery buggy"><video src="assets/Buggy/AutoBuggy.mp4" poster="assets/Buggy/AutoBuggy.jpg" width="480" height="480" autoplay muted loop playsinline disablepictureinpicture></video></a></div>
+        <div class="entry-text">
+          <span class="proj-title">Autonomous Delivery Buggy Control System</span> <span class="date">Nov 2025 – Feb 2026</span><br>
+          Designed the embedded control architecture — a finite-state mission manager and closed-loop PI velocity control with wheel synchronization; the competition run used the simpler open-loop FSM configuration for repeatability and ranked 1st of all teams 🏆.
+          <span class="links">
+            <a href="https://drive.google.com/file/d/1tDfyhSkPPQLBvlEug_h4g9MyPTMVsvAy/view?usp=sharing">competition video</a> /
+            <a href="assets/Buggy/Buggy2_Poster_Group30.pdf">poster</a> /
+            <a href="https://github.com/Geoffrey-WANG-1027/Geoffrey-WANG-1027.github.io/blob/main/assets/Buggy/Buggy-Version_09_04Feb2026.ino">code</a>
+          </span>
+        </div>
       </li>
-      <li>
-        <span class="proj-title">Vibration Isolation Platform Design</span> <span class="date">Feb 2026 – Mar 2026</span><br>
-        Led the modeling in a team of 4: grid-searched the stiffness and damping of a base-excited SDOF isolator to cut peak acceleration from 11.4 to 5.3 m/s² (limit 9 m/s²), and recommended it over a 2-DoF tuned mass absorber for robustness against the absorber’s undamped resonances.
+      <li class="entry">
+        <div class="thumb"><a href="assets/Vibration/VibrationPlatform.mp4" aria-label="Full explainer video: vibration isolation platform"><video src="assets/Vibration/VibrationPlatform-loop.mp4" poster="assets/Vibration/VibrationPlatform.jpg" width="480" height="480" autoplay muted loop playsinline disablepictureinpicture></video></a></div>
+        <div class="entry-text">
+          <span class="proj-title">Vibration Isolation Platform Design</span> <span class="date">Feb 2026 – Mar 2026</span><br>
+          Led the modeling in a team of 4: grid-searched the stiffness and damping of a base-excited SDOF isolator to cut peak acceleration from 11.4 to 5.3 m/s² (limit 9 m/s²), and recommended it over a 2-DoF tuned mass absorber for robustness against the absorber’s undamped resonances.
+          <span class="links">
+            <a href="assets/Vibration/VibrationPlatform.mp4">explainer video</a>
+          </span>
+        </div>
       </li>
     </ul>
 
     <details class="more">
       <summary>More projects</summary>
       <ul class="projects">
-        <li>
-          <span class="proj-title">Helicopter Altitude Control</span> <span class="date">Mar 2025 – Apr 2025</span><br>
-          Implemented and tuned a PID altitude controller for a tethered single-axis helicopter rig, run remotely on the University of Leeds ReLOAD platform: take-off, timed hover within ±2 cm of the target height, and landing.
-          <span class="links">
-            <a href="assets/Helicopter/Helicopter-success-144-P72-I5.0-D38.mp4">video</a> /
-            <a href="https://github.com/Geoffrey-WANG-1027/Geoffrey-WANG-1027.github.io/blob/main/assets/Helicopter/helicopter-code-submission.ino">code</a>
-          </span>
+        <li class="entry">
+          <div class="thumb"><a href="assets/Helicopter/Helicopter-success-144-P72-I5.0-D38.mp4" aria-label="Full video: helicopter altitude control"><video src="assets/Helicopter/HoverHelicopter.mp4" poster="assets/Helicopter/HoverHelicopter.jpg" width="480" height="480" autoplay muted loop playsinline disablepictureinpicture></video></a></div>
+          <div class="entry-text">
+            <span class="proj-title">Helicopter Altitude Control</span> <span class="date">Mar 2025 – Apr 2025</span><br>
+            Implemented and tuned a PID altitude controller for a tethered single-axis helicopter rig, run remotely on the University of Leeds ReLOAD platform: take-off, timed hover within ±2 cm of the target height, and landing.
+            <span class="links">
+              <a href="assets/Helicopter/Helicopter-success-144-P72-I5.0-D38.mp4">video</a> /
+              <a href="https://github.com/Geoffrey-WANG-1027/Geoffrey-WANG-1027.github.io/blob/main/assets/Helicopter/helicopter-code-submission.ino">code</a>
+            </span>
+          </div>
         </li>
         <li>
           <span class="proj-title">Bridge Load Analysis, Simulation and Manufacture</span> <span class="date">Mar 2025 – Apr 2025</span><br>
@@ -242,5 +264,10 @@
   </footer>
 
 </main>
+<script>
+  // Project clips autoplay muted; with reduced motion they stay on their still frame.
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches)
+    document.querySelectorAll('video[autoplay]').forEach(v => { v.autoplay = false; v.pause(); });
+</script>
 </body>
 </html>
