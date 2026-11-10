@@ -37,7 +37,7 @@
     <div class="intro-side">
       <img class="portrait" src="assets/site/profile.jpg" alt="Portrait of Yecheng (Geoffrey) WANG" width="993" height="993">
       <p class="links">
-        <a href="assets/CV/20261019_Yecheng_WANG_CV_preview.pdf">CV</a> /
+        <a href="assets/CV/20261108_Yecheng_WANG_CV_preview.pdf">CV</a> /
         <a href="https://github.com/Geoffrey-WANG-1027">GitHub</a> /
         <a href="https://www.linkedin.com/in/yecheng-geoffrey-wang/?locale=en-US">LinkedIn</a>
       </p>
@@ -85,11 +85,11 @@
         <div class="entry-text">
           <h3>From Millimetres to Microns: Hysteresis Compensation of a Cable-Driven Continuum Surgical Robot</h3>
           <p class="meta">Jun 2026 – Aug 2026 · CUHK Summer Undergraduate Research Programme</p>
-          <p class="takeaway">Cable hysteresis was the dominant error source; compensating it cut tip error 3.0× (234 → 78 µm), and an iterative learning layer brought it to ~15 µm.</p>
+          <p class="takeaway">Cable hysteresis was the dominant error source; compensating it cut tip-error scatter 3.0× (234 → 78 µm RMS), and three iterative-learning passes on the same test sequence reached 15 µm.</p>
           <p>
             I rebuilt a 14-notch tendon-driven continuum surgical robot with stereo tip tracking and cable-tension sensing, and identified path-dependent cable hysteresis as the dominant error source.
             I then designed a data-driven hysteresis compensator and a P-type iterative learning controller for the 0.25 s vision latency, and showed that tip loading widens the hysteresis loop, contradicting a friction-only assumption.
-            The compensator was validated under a preregistered protocol on a sealed multi-target benchmark; the learning layer then approached the platform’s repeatability limit.
+            I froze the compensator and tested it 18 days later on a 28-target sequence, where it cut tip-error scatter 3.0×; three iterative-learning passes on that sequence then reached 15 µm, near the same-day measurement noise.
           </p>
           <p class="links">
             <a href="assets/SURP2026/SURP2026_Poster_From_Millimetres_to_Microns.pdf">poster</a> /
@@ -101,12 +101,12 @@
       <article class="entry">
         <div class="thumb"></div>
         <div class="entry-text">
-          <h3>Task-Conditioned Kinematic Coverage of Reduced-DoF Continuum Robots for Endoscopic Surgery</h3>
-          <p class="meta">Aug 2026 – Present</p>
-          <p class="takeaway">Can a fixed-structure 4-DoF continuum arm execute each surgical gesture within position and tool-axis tolerances — and if not, why not?</p>
+          <h3>Task-Space Capability of 4- and 5-DoF Continuum Instruments from Surgical Gestures</h3>
+          <p class="meta">Aug 2026 – Present · Remote</p>
+          <p class="takeaway">Can 4- and 5-DoF continuum instruments perform recorded surgical gestures within position, tool-axis, joint-range and rate limits — and if not, why not?</p>
           <p>
-            I built a kinematic simulation that tests each gesture against these tolerances, attributes failures to reach or position–axis coupling, and benchmarks four comparators.
-            Next, I plan to replace synthetic primitives with instrument trajectories from open dVRK datasets, identify the arm’s bending structure from EM tip tracking, and validate per-gesture predictions in teleoperation on a dual-arm flexible endoscopic platform.
+            I built a pipeline that tests thousands of recorded dVRK gestures against these limits, and added a verified path search that exposed missed solutions in the sequential solver.
+            I attribute each failure to reach, tool-axis or rate limits and locate the joint limits involved; I wrote the study’s technical report and proposed open-loop trajectory replay to test the per-gesture predictions on hardware.
           </p>
         </div>
       </article>
@@ -114,13 +114,13 @@
 
     <article class="group">
       <h3>Physically Grounded Counterfactual World Models for Explainable Motion Prediction and Planning</h3>
-      <p class="meta">Dec 2025 – Present · KineWorld (AAAI 2027, advanced to Phase 2) · PHLEX (ICLR 2027, under review)</p>
+      <p class="meta">Dec 2025 – Present · KineWorld (under review) · PHLEX (ICLR 2027, under review)</p>
       <p class="takeaway">Explain a frozen predictor’s trajectories with differentiable motion mechanisms, then re-run those explanations as physically grounded counterfactual futures.</p>
       <div class="entry">
         <figure class="thumb"><a href="assets/KineWorld/KineWorld-overview.jpg"><img src="assets/KineWorld/KineWorld-thumb.jpg" alt="KineWorld overview: standard multimodal predictors show mode collapse or kinematically infeasible trajectories; a frozen predictor with KineWorld yields diverse, feasible ones" width="480" height="355" loading="lazy"></a><figcaption>KineWorld</figcaption></figure>
         <div class="entry-text">
           <p>
-            <strong>KineWorld</strong> is a pluggable world model that decodes a frozen predictor’s trajectories against a library of differentiable motion mechanisms, giving interpretable behavior attribution and counterfactual rollouts; on UniAD/<wbr>nuScenes it lowered maximum yaw rate from 0.986 to 0.640&nbsp;rad/s and raised mechanism self-consistency from 8.45% to 57.27%, with gains in comfort, safety and planning accuracy.
+            <strong>KineWorld</strong> is a pluggable world model that decodes a frozen predictor’s trajectories against a library of differentiable motion mechanisms, giving interpretable behavior attribution and counterfactual rollouts. Plugged into a frozen UniAD stack on nuScenes, it made plans more physically feasible and interpretable at no accuracy cost: maximum yaw rate fell from 0.986 to 0.640&nbsp;rad/s, mechanism self-consistency rose from 8.45% to 57.27%, and collisions decreased.
           </p>
         </div>
       </div>
@@ -133,7 +133,7 @@
           </p>
         </div>
       </div>
-      <p class="meta">Co-researcher, with a PhD student at Purdue University</p>
+      <p class="meta">Independent research · with a Ph.D. student at Purdue University</p>
     </article>
   </section>
 
@@ -148,7 +148,7 @@
       <li>
         <p class="pub-title">KineWorld: A Pluggable Counterfactual Kinematic World Model for Physically Grounding Multimodal Motion Prediction</p>
         <p class="authors"><strong>Y. Wang</strong>, Y. Li</p>
-        <p class="venue"><span class="badge">AAAI 2027</span> advanced to Phase 2</p>
+        <p class="venue">under review</p>
       </li>
       <li>
         <p class="pub-title">MBO-YOLO: An Enhanced YOLOv8n-Based Algorithm for Detecting Marine Benthic Organisms</p>
@@ -261,7 +261,7 @@
 
   <footer>
     <p class="updated">© 2026 Yecheng WANG</p>
-    <p class="updated">Last updated: October 2026</p>
+    <p class="updated">Last updated: November 2026</p>
   </footer>
 
 </main>

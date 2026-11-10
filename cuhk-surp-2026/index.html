@@ -121,8 +121,8 @@
       · Mentor: <a href="https://fokkwan.github.io/huojun.github.io/">Dr. Jun HUO</a>
     </p>
     <div class="stats">
-      <div class="stat"><div class="num">3.0&times;</div><div class="label">error reduction</div></div>
-      <div class="stat"><div class="num">15 &micro;m</div><div class="label">learning floor</div></div>
+      <div class="stat"><div class="num">3.0&times;</div><div class="label">error-scatter reduction</div></div>
+      <div class="stat"><div class="num">15 &micro;m</div><div class="label">after 3 learning passes</div></div>
       <div class="stat"><div class="num">~1 g</div><div class="label">weighing resolution</div></div>
     </div>
     <div class="summary">
@@ -131,12 +131,12 @@
       Presentation Session on 13 August 2026. The platform was rebuilt and instrumented
       from CAD — micron-level stereo tip tracking, cable-tension sensing, 200&nbsp;Hz
       logging — and its dominant error source characterized: <strong>path-dependent
-      hysteresis of up to ~0.9&nbsp;mm</strong>, against a ~30&nbsp;µm repeatability floor.</p>
-      <p>A data-driven compensator (a 498-point nonparametric monotone map) was validated
-      under a preregistered, frozen-prediction protocol: frozen 18 days before a sealed
-      28-target benchmark, it <strong>cut tip error three-fold (234 → 78&nbsp;µm)</strong>;
-      an iterative-learning layer on top converged to <strong>~15&nbsp;µm</strong> — the
-      machine's own repeatability limit. Side findings: hysteresis loops widen under tip
+      hysteresis of up to ~0.9&nbsp;mm</strong>, against ~30&nbsp;µm repeatability.</p>
+      <p>A data-driven compensator (a 498-point nonparametric monotone map) was frozen and
+      tested 18 days later on a 28-target sequence: it <strong>cut tip-error scatter
+      three-fold (234 → 78&nbsp;µm RMS)</strong>; three iterative-learning passes on that
+      same sequence reached <strong>15&nbsp;µm</strong>, near the same-day measurement
+      noise. Side findings: hysteresis loops widen under tip
       load (opposite to the friction-only prediction, replicated across days), and the
       robot's orientation channel doubles as a weighing scale with ~1&nbsp;g estimated
       resolution.</p>
